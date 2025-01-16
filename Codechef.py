@@ -34,7 +34,7 @@ def solve(*args):
     if OFFLINE_TEST:
         log("----- solving ------")
         log(*args)
-        log("----- ------- ------")
+        log("--------------------")
     return solve_(*args)
 
 
