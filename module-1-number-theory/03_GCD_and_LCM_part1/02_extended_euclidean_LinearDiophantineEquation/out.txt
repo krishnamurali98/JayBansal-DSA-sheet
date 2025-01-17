@@ -1,0 +1,3 @@
+Case: 1 Solutions : 4, 0
+Case: 2 No Solution
+Case: 3 Solutions : 4, -4
