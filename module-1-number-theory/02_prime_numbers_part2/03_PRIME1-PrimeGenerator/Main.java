@@ -50,8 +50,10 @@ class Main {
                 primeNumbers.add(i);
         }
     }
-
 }
+
+
+
 class Solver {
 	  
     static boolean[] primesBetweenNandM = new boolean[100001];
