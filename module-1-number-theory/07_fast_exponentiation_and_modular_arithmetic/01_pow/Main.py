@@ -20,7 +20,7 @@ def pow_iterative(a, b):
     while b > 0:
         if b % 2 == 1:
             ans *= a
-        a *= a
+        ans *= ans
         b >>= 1
     return ans
 
