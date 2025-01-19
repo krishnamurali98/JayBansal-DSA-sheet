@@ -14,9 +14,9 @@ class Solution {
                 swap(nums, l, m);
                 l++;
                 m++;
-            } else if(nums[m] == 1) {
+            } else if(nums[m] == 1)
                 m++;
-            } else {
+            else {
                 swap(nums, m, h);
                 h--;
             }
