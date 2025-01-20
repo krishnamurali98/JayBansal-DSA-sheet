@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class Main {
+public class Main {
 	public static StringBuilder output = new StringBuilder();
 
 	public static void main(String[] args) {
@@ -38,20 +38,22 @@ class Solver {
 		// Main.output.append(input);
         int m = pattern.length();
         int n = text.length();
-     
-        long hash_pattern = 0;
-        long hash_text = 0;
-
-        int power = 1;
-        for(int i=0;i<m;i++) {
-            hash_pattern = (hash_pattern + ((pattern.charAt(i) - 'a' + 1) * power) % MOD) % MOD;
-            hash_text = (hash_text + ((text.charAt(i) - 'a' + 1) * power) % MOD) % MOD;
-            power = (power*P) % MOD;
-        }
 
         if(m > n) {
             return;
         }
+     
+        long hash_pattern = 0;
+        long hash_text = 0;
+
+        long power = 1;
+        for(int i=0;i<m;i++) {
+            hash_pattern = (hash_pattern + (pattern.charAt(i) - 'a' + 1) * power) % MOD;
+            hash_text = (hash_text + ((text.charAt(i) - 'a' + 1) * power) % MOD) % MOD;
+            power = (power*P) % MOD;
+        }
+
+
 
         if(hash_pattern == hash_text) {
             Main.output.append("0 ");
@@ -64,6 +66,5 @@ class Solver {
                 Main.output.append(i-m+1).append(" ");
             }
         }
-
 	}
 }
