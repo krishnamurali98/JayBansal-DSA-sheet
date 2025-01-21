@@ -60,6 +60,7 @@ class Solver {
         }
 
         for(int i = m; i<n;i++) {
+            
             hash_text = (hash_text - (text.charAt(i-m)-'a'+1) + (text.charAt(i)-'a' + 1) * power) % MOD;
             hash_text = (hash_text * modular_inverse_P) % MOD;
             if(hash_pattern == hash_text) {
